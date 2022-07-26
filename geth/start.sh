@@ -4,13 +4,13 @@ DATA_DIR=${DATA_DIR:-"/data"}
 GAS_LIMIT=${GAS_LIMIT:-"8000000"}
 GAS_PRICE=${GAS_PRICE:-"1000000000"}
 NETWORK_ID=${NETWORK_ID:-"2020"}
+UNLOCK_LIST=${UNLOCK_LIST:-""}
 
 if [ ! "$(ls -A $DATA_DIR)" ]; then
   echo "Init from custom genesis"
   geth --nousb init --datadir $DATA_DIR /root/config.json
   cp -R /root/keystore $DATA_DIR
 fi
-UNLOCK=""
 echo "Starting GETH..."
 geth --nousb \
   --ipcdisable \
@@ -37,4 +37,4 @@ geth --nousb \
   --gcmode archive \
   --vmdebug \
   --password /root/password.txt \
-  --unlock "$UNLOCK"
+  --unlock "$UNLOCK_LIST"
