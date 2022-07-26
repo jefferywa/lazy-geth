@@ -13,14 +13,8 @@ if [ ! "$(ls -A $DATA_DIR)" ]; then
 fi
 echo "Starting GETH..."
 geth --nousb \
-  --ipcdisable \
-  --nodiscover \
   --maxpeers 0 \
-  --nat none \
   --datadir /data \
-  --mine \
-  --miner.gaslimit "$GAS_LIMIT" \
-  --miner.gasprice "$GAS_PRICE" \
   --networkid "$NETWORK_ID" \
   --http \
   --http.addr 0.0.0.0 \
@@ -32,9 +26,5 @@ geth --nousb \
   --ws.port 8546 \
   --ws.origins '*' \
   --ws.api 'eth,net,web3' \
-  --exitwhensynced \
-  --syncmode full \
-  --gcmode archive \
-  --vmdebug \
   --password /root/password.txt \
   --unlock "$UNLOCK_LIST"
