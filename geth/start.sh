@@ -18,7 +18,7 @@ geth --nousb \
   --mine \
   --miner.gaslimit "$GAS_LIMIT" \
   --miner.gasprice "$GAS_PRICE" \
-  --miner.etherbase 0x0000000000000000000000000000000000000000 \
+  --miner.etherbase 0x0000000000000000000000000000000000000001 \
   --networkid "$NETWORK_ID" \
   --http \
   --http.addr 0.0.0.0 \
