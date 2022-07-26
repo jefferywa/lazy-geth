@@ -1,9 +1,7 @@
 #!/usr/bin/env sh
 
 DATA_DIR=${DATA_DIR:-"/data"}
-GAS_LIMIT=${GAS_LIMIT:-"8000000"}
-GAS_PRICE=${GAS_PRICE:-"1000000000"}
-NETWORK_ID=${NETWORK_ID:-"2020"}
+NETWORK_ID=${NETWORK_ID:-"1337"}
 UNLOCK_LIST=${UNLOCK_LIST:-""}
 
 if [ ! "$(ls -A $DATA_DIR)" ]; then
