@@ -8,4 +8,4 @@ services:
       - 8545:8545
     environment:
       - NETWORK_ID=1337
-      - UNLOCK_LIST=
+      - UNLOCK_LIST=0x1A17Dca97c37D34356fD0D211035996ad523Ed31

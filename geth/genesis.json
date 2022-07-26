@@ -12,8 +12,8 @@
     "berlinBlock": 0,
     "londonBlock": 0
   },
+  "alloc": {},
   "difficulty": "1",
   "gasLimit": "8000000",
-  "extradata": "",
-  "alloc": {}
+  "extradata": ""
 }
